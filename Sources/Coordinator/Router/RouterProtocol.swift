@@ -13,6 +13,7 @@ public protocol RouterProtocol: AnyObject {
     func dismiss(animated flag: Bool, completion: (() -> Void)?)
     func dismiss(animated flag: Bool)
     func pushViewController(_ viewController: UIViewController, animated: Bool)
+    func popViewController(animated: Bool) -> UIViewController?
     func popToViewController(_ viewController: UIViewController, animated: Bool) -> [UIViewController]?
     func popToRootViewController(animated: Bool) -> [UIViewController]?
     
