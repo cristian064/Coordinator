@@ -28,4 +28,12 @@ extension CoordinatorProtocol {
         child.start()
     }
     
+    public func presentChild(_ child: CoordinatorProtocol) {
+        children.append(child)
+        child.finishFlow = { [weak self, weak child] in
+            guard let self = self, let child = child else { return }
+            self.removeChild(child)
+        }
+        child.start()
+    }
 }

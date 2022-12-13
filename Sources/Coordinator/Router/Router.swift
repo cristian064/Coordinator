@@ -9,10 +9,8 @@ import UIKit
 
 public final class Router {
     private let navigationController: UINavigationController
-//    private let routerRootController: UIViewController?
     public init(navigationController: UINavigationController) {
         self.navigationController = navigationController
-//        self.routerRootController = navigationController.viewControllers.first
     }
 }
 
